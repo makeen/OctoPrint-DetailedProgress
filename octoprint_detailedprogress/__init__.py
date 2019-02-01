@@ -130,16 +130,16 @@ class DetailedProgressPlugin(octoprint.plugin.EventHandlerPlugin,
 	def get_settings_defaults(self):
 		return dict(
 			messages = [
-				"{completion:.2f}%  complete",
-				"ETL {printTimeLeft}",
-				"ETA {ETA}",
-				"{accuracy} accuracy"
+				##"{completion:.2f}%  complete",
+				"Left {printTimeLeft}",
+				##"ETA {ETA}",
+				##"{accuracy} accuracy"
 			],
 			eta_strftime = "%H %M %S Day %d",
 			etl_format = "{hours:02d}h{minutes:02d}m{seconds:02d}s",
 			time_to_change = 10,
-			use_M73 = False,
-			M73_PrusaStyle = False
+			use_M73 = True,
+			M73_PrusaStyle = True
 		)
 
 	##~~ Softwareupdate hook
